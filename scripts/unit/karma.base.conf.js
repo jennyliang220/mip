@@ -42,7 +42,7 @@ module.exports = {
     exclude: [],
 
     // borwser list
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -96,9 +96,13 @@ module.exports = {
     // browser time out
     browserDisconnectTimeout: 10000,
 
+    browserDisconnectTolerance: 1,
+
     // process kill time
     processKillTimeout: 10000,
 
     // browser no activity time
-    browserNoActivityTimeout: 300000
+    browserNoActivityTimeout: 5 * 60 * 1000,
+
+    captureTimeout: 5 * 60 * 1000
 }
